@@ -2,16 +2,21 @@
 
 [中文：安装教学](https://www.bilibili.com/video/BV1S5411c7Vy/)
 
-## Demo
+支持的 Markdown 语法，[注意不支持图片](https://core.telegram.org/bots/api#markdownv2-style)：
 
-1. add @ServerChan2Bot in telegram 
-2. send /sendkey command to get `sendkey` and `api url`
-3. send HTTP request to `api url`( in some script .eg ), bot will send the  `text` to you。
-
-## Install
-
-1. fork and clone the repo
-2. cp .env.example to .env
-3. change `<YOUR_BOT_TOKEN>` and  `<Random_string_to_make_chat_id_safe>`
-4. push to vercel
-
+```
+    *bold \*text*
+    _italic \*text_
+    __underline__
+    ~strikethrough~
+    *bold _italic bold ~italic bold strikethrough~ __underline italic bold___ bold*
+    [inline URL](http://www.example.com/)
+    [inline mention of a user](tg://user?id=123456789)
+    `inline fixed-width code`
+    ```
+    pre-formatted fixed-width code block
+    ```
+    ```python
+    pre-formatted fixed-width code block written in the Python programming language
+    ```
+```
