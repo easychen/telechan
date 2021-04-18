@@ -17,7 +17,6 @@ public/
 
 # misc
 .DS_Store
-.env
 yarn.*
 # !.env-sample
 x*
