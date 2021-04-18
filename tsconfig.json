@@ -1,0 +1,10 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"include": ["api"],
+	"compilerOptions": {
+		"outDir": "public",
+		"strict": false,
+		"strictNullChecks": false,
+		"sourceMap": true
+	}
+}
