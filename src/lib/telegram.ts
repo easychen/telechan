@@ -46,7 +46,7 @@ async function localBot() {
 
 export async function useWebhook(req: NowRequest, res: NowResponse) {
 	if (req.method === "GET") {
-		const { text = "" , sendkey = "" } = req.query
+		const { text = "" , sendkey = "" , desp = "" } = req.query
 		if( text == "" || sendkey == "" )
 		{
 			throw new Error('text & sendkey cannot be empty');
@@ -63,7 +63,8 @@ export async function useWebhook(req: NowRequest, res: NowResponse) {
 			{
 				var params = new URLSearchParams();
 				params.append("chat_id",String(key_info[0]));
-				params.append("text",String(text));
+				params.append("text",String(text)+"\n\n"+String(desp));
+				params.append("parse_mode","MarkdownV2");
 				const ret = await axios.post( "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage" , params );
 				res.status(200).json( ret.data );
 			}
