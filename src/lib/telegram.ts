@@ -48,9 +48,9 @@ export async function useWebhook(req: NowRequest, res: NowResponse) {
 	
 	if( req.url?.substring(0,9) == '/api/send' ){
 
-		const text = req.query.text || req.body.text || "";
-		const sendkey = req.query.sendkey || req.body.sendkey || "";
-		const desp = req.query.desp || req.body.desp || "";
+		const text = req.query?.text || req.body?.text || "";
+		const sendkey = req.query?.sendkey || req.body?.sendkey || "";
+		const desp = req.query?.desp || req.body?.desp || "";
 		
 		if( text == "" || sendkey == "" )
 		{
