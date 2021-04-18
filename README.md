@@ -1,5 +1,7 @@
 # TeleChan - message api for telegram bot
 
+[中文：安装教学](https://www.bilibili.com/video/BV1S5411c7Vy/)
+
 ## Demo
 
 1. add @ServerChan2Bot in telegram 
