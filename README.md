@@ -2,7 +2,7 @@
 
 [中文：安装教学](https://www.bilibili.com/video/BV1S5411c7Vy/)
 
-支持的 Markdown 语法，[注意不支持图片](https://core.telegram.org/bots/api#markdownv2-style)：
+仅支持部分 Markdown 语法，任何不兼容以下语法的的提交，都会导致 400 错误。[注意不支持图片](https://core.telegram.org/bots/api#markdownv2-style)，注意不支持图片，注意不支持图片：
 
 ```
     *bold \*text*
@@ -20,3 +20,7 @@
     pre-formatted fixed-width code block written in the Python programming language
     ```
 ```
+
+## 感谢
+
+本应用基于 [Telegram Bot Boilerplate with Vercel's Serverless Functions](https://github.com/waptik/telegram-bot-boilerplate-now-serverless-api)修改而成。
