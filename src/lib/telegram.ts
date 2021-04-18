@@ -46,7 +46,12 @@ async function localBot() {
 
 export async function useWebhook(req: NowRequest, res: NowResponse) {
 	if (req.method === "GET") {
-		const { text = "" , sendkey = "" , desp = "" } = req.query
+
+		throw new Error( req.url );
+		const text = req.query.text || req.body.text || "";
+		const sendkey = req.query.sendkey || req.body.sendkey || "";
+		const desp = req.query.desp || req.body.desp || "";
+		
 		if( text == "" || sendkey == "" )
 		{
 			throw new Error('text & sendkey cannot be empty');
