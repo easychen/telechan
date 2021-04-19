@@ -53,6 +53,7 @@ Heavily modified base [Telegram Bot Boilerplate with Vercel's Serverless Functio
 - sendkey,required
 - text,required
 - desp,optional
+- markdown,optional
 
 仅支持部分 Markdown 语法，任何不兼容以下语法的的提交，都会导致 400 错误。[注意不支持图片](https://core.telegram.org/bots/api#markdownv2-style)，注意不支持图片，注意不支持图片：
 

@@ -51,6 +51,7 @@ export async function useWebhook(req: NowRequest, res: NowResponse) {
 		const text = req.query?.text || req.body?.text || "";
 		const sendkey = req.query?.sendkey || req.body?.sendkey || "";
 		const desp = req.query?.desp || req.body?.desp || "";
+		const markdown = req.query?.markdown || req.body?.markdown || "";
 		
 		if( text == "" || sendkey == "" )
 		{
@@ -68,8 +69,15 @@ export async function useWebhook(req: NowRequest, res: NowResponse) {
 			{
 				var params = new URLSearchParams();
 				params.append("chat_id",String(key_info[0]));
-				params.append("text",String(text)+"\n\n"+String(desp));
-				params.append("parse_mode","MarkdownV2");
+				let content = String(text)+"\n\n"+String(desp);
+				if( markdown != "" )
+				{
+					content += String(markdown);
+					params.append("parse_mode","MarkdownV2");
+				}
+				
+				params.append("text",content);
+
 				const ret = await axios.post( "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage" , params );
 				res.status(200).json( ret.data );
 			}
