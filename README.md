@@ -19,6 +19,24 @@ Both HTTP `GET` or `POST` are OK
 
 `text` and `desp` support [telegram markdown](https://core.telegram.org/bots/api#markdownv2-style) which is a very small subset of markdown without image support
 
+### send function 
+
+```php
+function tg_send(  $text , $desp = '' , $key = '<sendkey>'  )
+{
+    $postdata = http_build_query( array( 'text' => $text, 'desp' => $desp ));
+    $opts = array('http' =>
+    array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => $postdata));
+    
+    $context  = stream_context_create($opts);
+    return $result = file_get_contents('telechan8.vercel.app/api/send?sendkey='.$key, false, $context);
+ 
+}
+```
+
 ## Thanks
 
 Heavily modified base [Telegram Bot Boilerplate with Vercel's Serverless Functions](https://github.com/waptik/telegram-bot-boilerplate-now-serverless-api)
