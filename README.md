@@ -17,7 +17,12 @@ Both HTTP `GET` or `POST` are OK
 - text,required
 - desp,optional
 
-`text` and `desp` support [telegram markdown](https://core.telegram.org/bots/api#markdownv2-style) which is a very small subset of markdown
+`text` and `desp` support [telegram markdown](https://core.telegram.org/bots/api#markdownv2-style) which is a very small subset of markdown without image support
+
+## Thanks
+
+Heavily modified base [Telegram Bot Boilerplate with Vercel's Serverless Functions](https://github.com/waptik/telegram-bot-boilerplate-now-serverless-api)
+
 
 ## 中文教程
 
@@ -49,7 +54,3 @@ Both HTTP `GET` or `POST` are OK
     pre-formatted fixed-width code block written in the Python programming language
     ```
 ```
-
-## 感谢
-
-本应用基于 [Telegram Bot Boilerplate with Vercel's Serverless Functions](https://github.com/waptik/telegram-bot-boilerplate-now-serverless-api)修改而成。
