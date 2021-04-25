@@ -1,4 +1,17 @@
-# TeleChan - message api for telegram bot
+# TeleChan - message api for telegram bot 
+> 可供多人发送消息的 telegram 机器人 api ， 类似server酱的开源实现
+
+## 直接试用我搭建的机器人
+
+1. 添加 @TeleChan8Bot
+2. 发送 /sendkey 获得 key 和 url
+3. 通过 url 发送请求即可
+
+## Example
+
+1. add @TeleChan8Bot in telegram
+2. `/sendkey` to get key & url
+3. send request via url 
 
 ## How to use
 
@@ -16,6 +29,7 @@ Both HTTP `GET` or `POST` are OK
 - sendkey,required
 - text,required
 - desp,optional
+- markdown,optional
 
 `text` and `desp` support [telegram markdown](https://core.telegram.org/bots/api#markdownv2-style) which is a very small subset of markdown without image support
 
