@@ -20,9 +20,9 @@ function botUtils() {
 	bot.use(Telegraf.log());
 	bot.use(logger);
 
-	bot.start(ctx => {
-		return ctx.reply("This is a test bot.");
-	});
+// 	bot.start(ctx => {
+// 		return ctx.reply("This is a test bot.");
+// 	});
 
 	bot.command("about", about()).command("sendkey", sendkey()).on("text", greeting());
 }
